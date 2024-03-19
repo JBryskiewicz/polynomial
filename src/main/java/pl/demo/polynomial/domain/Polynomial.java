@@ -16,10 +16,6 @@ public class Polynomial {
     @Id
     private Long id;
 
-    private Float functionValue;
-
-    private Float constant;
-
     @OneToMany(fetch = FetchType.EAGER)
     private List<Variable> variables;
 

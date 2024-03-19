@@ -32,8 +32,6 @@ public class PolynomialServiceImpl implements PolynomialService{
     public Polynomial updatePolynomial(Long id, Polynomial polynomial) {
         Polynomial existingPoly = polyRepository.findById(id).orElse(null);
         if(existingPoly != null){
-            existingPoly.setFunctionValue(polynomial.getFunctionValue());
-            existingPoly.setConstant(polynomial.getConstant());
             existingPoly.setVariables(polynomial.getVariables());
             return polyRepository.save(existingPoly);
         }
