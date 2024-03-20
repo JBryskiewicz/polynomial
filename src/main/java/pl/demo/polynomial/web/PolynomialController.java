@@ -9,7 +9,6 @@ import pl.demo.polynomial.service.PolynomialService;
 
 import java.util.List;
 
-
 @RestController
 @AllArgsConstructor
 @RequestMapping("/api/polynomials")

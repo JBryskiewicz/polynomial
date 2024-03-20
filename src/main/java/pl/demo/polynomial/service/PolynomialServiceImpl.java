@@ -1,5 +1,6 @@
 package pl.demo.polynomial.service;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import pl.demo.polynomial.domain.Polynomial;
@@ -8,6 +9,7 @@ import pl.demo.polynomial.repository.PolynomialRepository;
 import java.util.List;
 
 @Service
+@Transactional
 @AllArgsConstructor
 public class PolynomialServiceImpl implements PolynomialService{
 
