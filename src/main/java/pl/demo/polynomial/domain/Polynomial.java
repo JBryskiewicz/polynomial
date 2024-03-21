@@ -21,4 +21,8 @@ public class Polynomial {
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Variable> variables;
 
+    private int rangeStart;
+
+    private int rangeEnd;
+
 }

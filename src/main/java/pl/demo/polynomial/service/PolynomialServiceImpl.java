@@ -40,6 +40,8 @@ public class PolynomialServiceImpl implements PolynomialService{
         Polynomial existingPoly = polyRepository.findById(id).orElse(null);
         if(existingPoly != null){
             existingPoly.setVariables(polynomial.getVariables());
+            existingPoly.setRangeStart(polynomial.getRangeStart());
+            existingPoly.setRangeEnd(polynomial.getRangeEnd());
             return polyRepository.save(existingPoly);
         }
         return null;
