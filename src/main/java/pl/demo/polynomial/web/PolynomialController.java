@@ -16,8 +16,8 @@ public class PolynomialController {
     private final PolynomialService polyService;
 
     @GetMapping
-    public ResponseEntity<List<Polynomial>> getAllPolynomials() {
-        List<Polynomial> polynomials = polyService.findAll();
+    public ResponseEntity<List<Polynomial>> getPolynomialsList() {
+        List<Polynomial> polynomials = polyService.findLastTenPolynomials();
         return new ResponseEntity<>(polynomials, HttpStatus.OK);
     }
 

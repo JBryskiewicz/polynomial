@@ -21,6 +21,11 @@ public class PolynomialServiceImpl implements PolynomialService{
     }
 
     @Override
+    public List<Polynomial> findLastTenPolynomials() {
+        return polyRepository.findLastTenPolynomials();
+    }
+
+    @Override
     public Polynomial findById(Long id) {
         return polyRepository.findById(id).orElse(null);
     }
