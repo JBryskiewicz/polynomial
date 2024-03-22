@@ -36,6 +36,15 @@ public class PolynomialController {
         return new ResponseEntity<>(newPoly, HttpStatus.OK);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Polynomial> updatePolynomial(@PathVariable Long id, @RequestBody Polynomial polynomial){
+        Polynomial updatedPoly = polyService.updatePolynomial(id, polynomial);
+        if (updatedPoly != null) {
+            return new ResponseEntity<>(updatedPoly, HttpStatus.OK);
+        }
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletePolynomial(@PathVariable Long id) {
         boolean deleted = polyService.deletePolynomial(id);

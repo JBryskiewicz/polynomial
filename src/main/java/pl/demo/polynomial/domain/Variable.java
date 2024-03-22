@@ -18,6 +18,6 @@ public class Variable {
 
     private int position;
 
-    private int value;
+    private float value;
 
 }
