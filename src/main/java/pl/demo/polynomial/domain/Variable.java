@@ -19,5 +19,4 @@ public class Variable {
     private int position;
 
     private float value;
-
 }

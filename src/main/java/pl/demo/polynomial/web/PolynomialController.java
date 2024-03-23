@@ -9,8 +9,8 @@ import pl.demo.polynomial.service.PolynomialService;
 
 import java.util.List;
 
-@RestController
 @AllArgsConstructor
+@RestController
 @RequestMapping("/api/polynomials")
 public class PolynomialController {
     private final PolynomialService polyService;
