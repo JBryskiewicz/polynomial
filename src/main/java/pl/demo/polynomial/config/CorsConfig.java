@@ -13,7 +13,10 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-                .allowedOrigins("http://localhost:4200")
+                .allowedOrigins(
+                        "http://localhost:4200",
+                        "https://polynomial-ui-eight.vercel.app/"
+                )
                 .allowedMethods(
                         HttpMethod.GET.name(),
                         HttpMethod.POST.name(),
