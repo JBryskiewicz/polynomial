@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import pl.demo.polynomial.domain.Polynomial;
 import pl.demo.polynomial.service.PolynomialService;
 
+import java.util.Arrays;
 import java.util.List;
 
 @AllArgsConstructor
@@ -15,9 +16,9 @@ import java.util.List;
 public class PolynomialController {
     private final PolynomialService polyService;
 
-    @GetMapping
-    public ResponseEntity<List<Polynomial>> getPolynomialsList() {
-        List<Polynomial> polynomials = polyService.findLastTenPolynomials();
+    @GetMapping("/forUser/{id}")
+    public ResponseEntity<List<Polynomial>> getPolynomialsList(@PathVariable long id) {
+        List<Polynomial> polynomials = polyService.findLastTenPolynomials(id);
         return new ResponseEntity<>(polynomials, HttpStatus.OK);
     }
 

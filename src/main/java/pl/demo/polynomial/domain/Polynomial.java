@@ -10,6 +10,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Table(name = "polynomials")
 public class Polynomial {
 
@@ -24,5 +25,7 @@ public class Polynomial {
     private float rangeStart;
 
     private float rangeEnd;
+
+    private Long userId;
 
 }

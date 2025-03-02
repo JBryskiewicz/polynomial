@@ -23,8 +23,8 @@ public class PolynomialServiceImpl implements PolynomialService {
     }
 
     @Override
-    public List<Polynomial> findLastTenPolynomials() {
-        List<Polynomial> polyList = polyRepository.findLastTenPolynomials();
+    public List<Polynomial> findLastTenPolynomials(long id) {
+        List<Polynomial> polyList = polyRepository.findLastTenPolynomials(id);
         polyList.forEach(polynomial -> {
             polynomial.getVariables().sort(Comparator.comparingInt(Variable::getPosition));
         });

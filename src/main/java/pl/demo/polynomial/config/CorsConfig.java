@@ -17,13 +17,7 @@ public class CorsConfig implements WebMvcConfigurer {
                         "http://localhost:4200",
                         "https://polynomial-ui-eight.vercel.app/"
                 )
-                .allowedMethods(
-                        HttpMethod.GET.name(),
-                        HttpMethod.POST.name(),
-                        HttpMethod.PUT.name(),
-                        HttpMethod.DELETE.name(),
-                        HttpMethod.PATCH.name()
-                )
+                .allowedMethods("*")
                 .allowedHeaders("*")
                 .allowCredentials(true)
                 .maxAge(3600);
